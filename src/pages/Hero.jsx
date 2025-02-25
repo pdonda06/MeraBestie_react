@@ -12,7 +12,9 @@ import gift from "../assets/gift.jpg";
 import metallicGelPens from "../assets/metallic-gel-pens.png";
 import shiffonBluePens from "../assets/shiffon-blue-pens.png";
 import purpleLiteGold from "../assets/purple-lite-gold.png";
-
+import pastelNotebook from "../assets/pastel-notebook.jpg";
+import customJournal from "../assets/custom-journal.jpg";
+import cuteBallpen from "../assets/cute-ballpen.jpg";
 
 const categories = [
   { name: "Custom Stamps", img: customStamps },
@@ -51,7 +53,175 @@ const writingEssentials = [
       reviews: 177,
       badge: "Best Seller",
     },
+    {
+      id: 4,
+      image: cuteBallpen,
+      title: "Purple Lite Gold",
+      price: "₹300",
+      rating: 4.98,
+      reviews: 177,
+      badge: "Best Seller",
+    },
   ];
+
+  const Notebooks = [
+    {
+      id: 1,
+      image:pastelNotebook ,
+      title: "Metallic Gel Pens",
+      price: "₹1250",
+      rating: 4.98,
+      reviews: 205,
+      badge: "Best Seller",
+    },
+    {
+      id: 2,
+      image: customJournal,
+      title: "Shiffon Blue Pens",
+      price: "₹4700",
+      rating: 4.98,
+      reviews: 205,
+    },
+    {
+      id: 3,
+      image: purpleLiteGold,
+      title: "Purple Lite Gold",
+      price: "₹300",
+      rating: 4.98,
+      reviews: 177,
+      badge: "Best Seller",
+    },
+    {
+      id: 4,
+      image: purpleLiteGold,
+      title: "Purple Lite Gold",
+      price: "₹300",
+      rating: 4.98,
+      reviews: 177,
+      badge: "Best Seller",
+    },
+  ];
+
+  const Gifts = [
+    {
+      id: 1,
+      image:pastelNotebook ,
+      title: "Metallic Gel Pens",
+      price: "₹1250",
+      rating: 4.98,
+      reviews: 205,
+      badge: "Best Seller",
+    },
+    {
+      id: 2,
+      image: customJournal,
+      title: "Shiffon Blue Pens",
+      price: "₹4700",
+      rating: 4.98,
+      reviews: 205,
+    },
+    {
+      id: 3,
+      image: purpleLiteGold,
+      title: "Purple Lite Gold",
+      price: "₹300",
+      rating: 4.98,
+      reviews: 177,
+      badge: "Best Seller",
+    },
+    {
+      id: 4,
+      image: purpleLiteGold,
+      title: "Purple Lite Gold",
+      price: "₹300",
+      rating: 4.98,
+      reviews: 177,
+      badge: "Best Seller",
+    },
+  ];
+
+  const Stamps = [
+    {
+      id: 1,
+      image:pastelNotebook ,
+      title: "Metallic Gel Pens",
+      price: "₹1250",
+      rating: 4.98,
+      reviews: 205,
+      badge: "Best Seller",
+    },
+    {
+      id: 2,
+      image: customJournal,
+      title: "Shiffon Blue Pens",
+      price: "₹4700",
+      rating: 4.98,
+      reviews: 205,
+    },
+    {
+      id: 3,
+      image: purpleLiteGold,
+      title: "Purple Lite Gold",
+      price: "₹300",
+      rating: 4.98,
+      reviews: 177,
+      badge: "Best Seller",
+    },
+    {
+      id: 4,
+      image: purpleLiteGold,
+      title: "Purple Lite Gold",
+      price: "₹300",
+      rating: 4.98,
+      reviews: 177,
+      badge: "Best Seller",
+    },
+  ];
+
+  const Arts = [
+    {
+      id: 1,
+      image:pastelNotebook ,
+      title: "Metallic Gel Pens",
+      price: "₹1250",
+      rating: 4.98,
+      reviews: 205,
+      badge: "Best Seller",
+    },
+    {
+      id: 2,
+      image: customJournal,
+      title: "Shiffon Blue Pens",
+      price: "₹4700",
+      rating: 4.98,
+      reviews: 205,
+    },
+    {
+      id: 3,
+      image: purpleLiteGold,
+      title: "Purple Lite Gold",
+      price: "₹300",
+      rating: 4.98,
+      reviews: 177,
+      badge: "Best Seller",
+    },
+    {
+      id: 4,
+      image: purpleLiteGold,
+      title: "Purple Lite Gold",
+      price: "₹300",
+      rating: 4.98,
+      reviews: 177,
+      badge: "Best Seller",
+    },
+  ];
+
+  
+
+
+
+
+
   
 
 const HomePage = () => {
@@ -102,7 +272,36 @@ const HomePage = () => {
       <section className="essentials-section">
         <h2>Notebooks & Paper Products</h2>
         <div className="grid-container">
-          {writingEssentials.map((product) => (
+          {Notebooks.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+
+      {/* Gifts and Wraps */}
+      <section className="essentials-section">
+        <h2>Gifts and Wraps</h2>
+        <div className="grid-container">
+          {Gifts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      <section className="essentials-section">
+        <h2>Stamps and Stickers</h2>
+        <div className="grid-container">
+          {Stamps.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      <section className="essentials-section">
+        <h2>Art and Craft Supplies</h2>
+        <div className="grid-container">
+          {Arts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

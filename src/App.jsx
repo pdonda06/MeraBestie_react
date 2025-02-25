@@ -2,21 +2,53 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import Heropage from "./pages/Hero";
+import EditProfile from "./components/EditProfile";
+import ShopPage from "./components/Shop";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-     <Navbar/>
-<<<<<<< HEAD
+     <Router>
+     
+      <Routes>
+     <Route path="/" element={
+          <>
+          <Navbar/>
+       <Heropage />
+       <Footer/>
+       </>
+     }/>
+     
+     <Route path="contactus" element={
+          <>
+          <Navbar/>
+          <ContactPage />
+          <Footer/>
+          </>
+        }/>
 
-     <Footer/>
 
-     <ContactPage />
+      <Route path="editprofile" element={
+          <>
+          <Navbar/>
+          <EditProfile/>
+          <Footer/>
+          </>
+        }/>
+     
+     <Route path="shop" element={
+          <>
+          <Navbar/>
+          <ShopPage/>
+          <Footer/>
+          </>
+        }/>
+     
 
-=======
-     {/* <ContactPage /> */}
-     <Heropage />
->>>>>>> b5b2902 (Your commit message)
+     </Routes>
+     </Router>
+
     </>
   )
 }
