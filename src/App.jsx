@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
@@ -54,3 +55,61 @@ function App() {
 }
 
 export default App
+=======
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ContactPage from "./pages/ContactPage";
+import CartPage from "./pages/CartPage";
+import Checkout from "./pages/Checkout";
+import Heropage from "./pages/Hero";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+function App() {
+  return (
+    <>
+     <Router>
+     
+    <Routes>
+      {/* <Heropage /> */}
+  <Route path="/" element={
+    <>
+      <Navbar />
+      <CartPage />
+      <Footer />
+    </>
+  } />
+  <Route path="/checkout" element={
+    <>
+      <Navbar />
+      <Checkout />
+      <Footer />
+    </>
+  } />
+
+     
+     {/* <Route path="contactus" element={
+          <>
+          <Navbar/>
+          <ContactPage />
+          <Footer/>
+          </>
+        }/> */}
+        
+
+     
+
+
+     {/* <ContactPage /> */}
+     
+     </Routes>
+     </Router>
+
+    </>
+  )
+}
+
+export default App
+
+
+
+>>>>>>> dda2cbb (cart and checkout)
