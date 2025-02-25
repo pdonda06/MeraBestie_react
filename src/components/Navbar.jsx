@@ -14,15 +14,15 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <div className="menu-links">
-        <a href="#">Home</a>
-        <a href="#">Shop</a>
-        <a href="#">Contact</a>
+        <a href="/">Home</a>
+        <a href="shop">Shop</a>
+        <a href="contactus">Contact</a>
       </div>
 
       {/* Icons */}
       <div className="icon-group">
         <img src="./img/cart_icon.png" alt="Cart" className="icon" />
-        <img src="../img/user.png" alt="User" className="icon" />
+        <a href="editprofile"><img src="../img/user.png" alt="User" className="icon" /></a>
         {/* Mobile Menu Button */}
         <img src="../img/menu.png" alt="Menu" className="menu-icon" onClick={() => setIsOpen(!isOpen)} />
       </div>
