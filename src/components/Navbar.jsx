@@ -17,6 +17,8 @@ export default function Navbar() {
         <a href="/">Home</a>
         <a href="shop">Shop</a>
         <a href="contactus">Contact</a>
+        <a href="card">Card</a>
+        <a href="pay">pay</a>
       </div>
 
       {/* Icons */}
