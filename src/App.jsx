@@ -1,10 +1,15 @@
-<<<<<<< HEAD
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import Heropage from "./pages/Hero";
 import EditProfile from "./components/EditProfile";
 import ShopPage from "./components/Shop";
+import CardPayment from "./components/Cardpayment";
+import UpiPayment from "./components/Upipayment";
+import CartPage from "./pages/CartPage";
+import Checkout from "./pages/Checkout"
+import CustomerReviews from "./components/CustomerReviews";
+import AdminDashboard from "./pages/AdminDashboard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +22,7 @@ function App() {
           <>
           <Navbar/>
        <Heropage />
+       <CustomerReviews/>
        <Footer/>
        </>
      }/>
@@ -45,62 +51,48 @@ function App() {
           <Footer/>
           </>
         }/>
-     
 
-     </Routes>
-     </Router>
-
-    </>
-  )
-}
-
-export default App
-=======
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import ContactPage from "./pages/ContactPage";
-import CartPage from "./pages/CartPage";
-import Checkout from "./pages/Checkout";
-import Heropage from "./pages/Hero";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-function App() {
-  return (
-    <>
-     <Router>
-     
-    <Routes>
-      {/* <Heropage /> */}
-  <Route path="/" element={
-    <>
-      <Navbar />
-      <CartPage />
-      <Footer />
-    </>
-  } />
-  <Route path="/checkout" element={
-    <>
-      <Navbar />
-      <Checkout />
-      <Footer />
-    </>
-  } />
-
-     
-     {/* <Route path="contactus" element={
+        <Route path="card" element={
           <>
           <Navbar/>
-          <ContactPage />
+          <CardPayment/>
           <Footer/>
           </>
-        }/> */}
-        
+        }/>
 
+       <Route path="pay" element={
+          <>
+          <Navbar/>
+          <UpiPayment/>
+          <Footer/>
+          </>
+        }/>
+
+        <Route path="cart" element={
+          <>
+          <Navbar/>
+          <CartPage/>
+          <Footer/>
+          </>
+        }/>
+     
+     <Route path="check" element={
+          <>
+          <Navbar/>
+          <Checkout/>
+          <Footer/>
+          </>
+        }/>
+
+<Route path="dash" element={
+          <>
+          <Navbar/>
+          <AdminDashboard/>
+          <Footer/>
+          </>
+        }/>
      
 
-
-     {/* <ContactPage /> */}
-     
      </Routes>
      </Router>
 
@@ -109,7 +101,3 @@ function App() {
 }
 
 export default App
-
-
-
->>>>>>> dda2cbb (cart and checkout)

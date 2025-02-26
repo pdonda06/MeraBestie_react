@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/Shop.css";
+import { useNavigate } from "react-router-dom";
 import metallicGelpen from "../assets/metallic-gel-pens.png" 
 import pastelNotebook from "../assets/pastel-notebook.jpg"
 import shiffonBallpen from "../assets/shiffon-blue-pens.png"
@@ -9,6 +10,9 @@ import sketchBook from "../assets/sketchbook.jpg"
 import Marker from "../assets/marker.jpg"
 import Nameplate from "../assets/nameplate.jpg"
 import stamps from "../assets/stamps.jpg"
+
+
+
 
 const products = [
   {
@@ -101,10 +105,11 @@ const products2 = [
 ];
 
 export default function ShopPage() {
+  const nav=useNavigate()
   return (
     <div className="shop-container">
       <section className="shop-banner">
-        <img src="../img/shop_head.png" alt="" />
+        <img className="img1" src="../img/shop_head.png" alt="" />
         {/* <h1>SHOP</h1>
         <p>Stationary</p> */}
       </section>
@@ -117,7 +122,7 @@ export default function ShopPage() {
               <h3>{product.title}</h3>
               <p>{product.price}</p>
               <p>⭐ {product.rating} ({product.reviews} reviews)</p>
-              <button className="add-to-cart">Add to Cart</button>
+              <button onClick={()=>nav("/cart")} className="add-to-cart">Add to Cart</button>
             </div>
           </div>
         ))}
@@ -132,7 +137,7 @@ export default function ShopPage() {
               <h3>{product.title}</h3>
               <p>{product.price}</p>
               <p>⭐ {product.rating} ({product.reviews} reviews)</p>
-              <button className="add-to-cart">Add to Cart</button>
+              <button onClick={()=>nav("/cart")} className="add-to-cart">Add to Cart</button>
             </div>
           </div>
         ))}
@@ -147,7 +152,7 @@ export default function ShopPage() {
               <h3>{product.title}</h3>
               <p>{product.price}</p>
               <p>⭐ {product.rating} ({product.reviews} reviews)</p>
-              <button className="add-to-cart">Add to Cart</button>
+              <button onClick={()=>nav("/cart")} className="add-to-cart">Add to Cart</button>
             </div>
           </div>
         ))}
@@ -164,7 +169,7 @@ export default function ShopPage() {
               <h3>{product.title}</h3>
               <p>{product.price}</p>
               <p>⭐ {product.rating} ({product.reviews} reviews)</p>
-              <button className="add-to-cart">Add to Cart</button>
+              <button onClick={()=>nav("/cart")} className="add-to-cart">Add to Cart</button>
             </div>
           </div>
         ))}

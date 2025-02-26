@@ -48,6 +48,7 @@ const CartPage = () => {
     );
   };
 
+
   return (
     <>
       <div className="cart-container">
@@ -111,7 +112,7 @@ const CartPage = () => {
           {/* Navigate to Checkout Page */}
           <button
             className="checkout-btn"
-            onClick={() => navigate("/checkout")}
+            onClick={() => navigate("/check")}
           >
             Proceed to checkout
           </button>
