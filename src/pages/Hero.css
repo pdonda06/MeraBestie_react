@@ -128,6 +128,14 @@
     width: 90%;
     max-width: 600px;
   }
+
+  img{
+    margin-left: 10%;
+  }
+
+  .hero1{
+    margin-left: 15%;
+  }
   
   .banner-box h3 {
     font-size: 1.8rem;

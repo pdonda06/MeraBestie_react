@@ -6,6 +6,10 @@ import EditProfile from "./components/EditProfile";
 import ShopPage from "./components/Shop";
 import CardPayment from "./components/Cardpayment";
 import UpiPayment from "./components/Upipayment";
+import CartPage from "./pages/CartPage";
+import Checkout from "./pages/Checkout"
+import CustomerReviews from "./components/CustomerReviews";
+import AdminDashboard from "./pages/AdminDashboard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -18,6 +22,7 @@ function App() {
           <>
           <Navbar/>
        <Heropage />
+       <CustomerReviews/>
        <Footer/>
        </>
      }/>
@@ -59,6 +64,30 @@ function App() {
           <>
           <Navbar/>
           <UpiPayment/>
+          <Footer/>
+          </>
+        }/>
+
+        <Route path="cart" element={
+          <>
+          <Navbar/>
+          <CartPage/>
+          <Footer/>
+          </>
+        }/>
+     
+     <Route path="check" element={
+          <>
+          <Navbar/>
+          <Checkout/>
+          <Footer/>
+          </>
+        }/>
+
+<Route path="dash" element={
+          <>
+          <Navbar/>
+          <AdminDashboard/>
           <Footer/>
           </>
         }/>

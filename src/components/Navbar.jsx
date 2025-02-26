@@ -17,26 +17,31 @@ export default function Navbar() {
         <a href="/">Home</a>
         <a href="shop">Shop</a>
         <a href="contactus">Contact</a>
-        <a href="card">Card</a>
-        <a href="pay">pay</a>
+        <a href="dash">Dashboard</a>
+        <a href="#">Items</a>
+        <a href="#">Office Essentials</a>
       </div>
 
       {/* Icons */}
       <div className="icon-group">
         <img src="./img/cart_icon.png" alt="Cart" className="icon" />
         <a href="editprofile"><img src="../img/user.png" alt="User" className="icon" /></a>
-        {/* Mobile Menu Button */}
-        <img src="../img/menu.png" alt="Menu" className="menu-icon" onClick={() => setIsOpen(!isOpen)} />
+        <img 
+          src="../img/menu.png" 
+          alt="Menu" 
+          className="menu-icon" 
+          onClick={() => setIsOpen(!isOpen)} 
+        />
       </div>
 
       {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="dropdown-menu">
-          <a href="#">Home</a>
-          <a href="#">Shop</a>
-          <a href="#">Contact</a>
-        </div>
-      )}
+      <div className={`dropdown-menu ${isOpen ? "open" : ""}`}>
+        <a href="/">Home</a>
+        <a href="shop">Shop</a>
+        <a href="contactus">Contact</a>
+        <a href="#">Items</a>
+        <a href="#">Office Essentials</a>
+      </div>
     </nav>
   );
 }

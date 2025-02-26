@@ -16,6 +16,7 @@ import pastelNotebook from "../assets/pastel-notebook.jpg";
 import customJournal from "../assets/custom-journal.jpg";
 import cuteBallpen from "../assets/cute-ballpen.jpg";
 
+
 const categories = [
   { name: "Custom Stamps", img: customStamps },
   { name: "Paper Clips", img: paperClips },
@@ -250,6 +251,8 @@ const HomePage = () => {
         </div>
       </section>
 
+      <img className="banner-section hero1" src="../img/hero1.png"/>
+
       {/* Banner Section */}
       <section className="banner-section">
         <div className="banner-box">
@@ -278,6 +281,8 @@ const HomePage = () => {
         </div>
       </section>
 
+      <img className="banner-section img" src="../img/shop_in.png"/>
+
 
       {/* Gifts and Wraps */}
       <section className="essentials-section">
@@ -288,6 +293,8 @@ const HomePage = () => {
           ))}
         </div>
       </section>
+
+      <a href="/shop"><img className="banner-sction hero1" src="../img/hero2.png"/></a>
 
       <section className="essentials-section">
         <h2>Stamps and Stickers</h2>
